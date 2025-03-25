@@ -34,17 +34,17 @@ In part 2, we are going to perform GUI testing with Sport chek’s web page. The
 ![Caption 1](media/1.png)  
 Figure 1 - Range PIT Test Coverage Report for old test suite  
 
-![Caption 2](media/4.png)  
+![Caption 2](media/2.png)  
 Figure 2 - Range PIT Mutations for old test suite  
 
-![Caption 3](media/2.png)  
+![Caption 3](media/3.png)  
 Figure 3 - Range PIT Test Coverage Report for new test suite  
 
-![Caption 4](media/5.png)  
+![Caption 4](media/4.png)  
 Figure 4 - Range PIT Mutations for new test suite  
 
 ## (2) DataUtilities Class
-![Caption 5](media/3.png)  
+![Caption 5](media/5.png)  
 Figure 5 - DataUtilities PIT Test Coverage Report for old test suite  
 
 ![Caption 6](media/6.png)  
