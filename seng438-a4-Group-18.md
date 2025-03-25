@@ -61,11 +61,29 @@ Figure 8 - DataUtilities PIT Mutations for new test suite
 # Analysis drawn on the effectiveness of each of the test classes
 
 # A discussion on the effect of equivalent mutants on mutation score accuracy
+Based on definition, equivalent mutants are the mutants that do the exactly same thing with the original program. They act in the same behavior as the original program. For example, if the original source code is “a = a+1” and if there is a mutant changes the code to be “a++”, then it will be an equivalent mutant since it does the same thing compared with the original code.
+
+Equivalent mutants will have no influence on mutation score. Since mutation score is calculated by mutation score = number of mutants killed by the test suites / number of all non equivalent mutants. Although equivalent mutants will always survive, it is not included within both denominator and numerator, so that equivalent mutants will have no impact on mutation score calculation. However, some mutation testing tools such as Pitest do include all mutants when calculating mutation coverage. Since for these tools they are not able to identify if a mutant is an equivalent mutant or not, in this way, it will decrease mutation score accuracy.
 
 # A discussion of what could have been done to improve the mutation score of the test suites
+Since the mutation score is calculated by the number of mutants killed by the test suites / number of all non equivalent mutants, to increase the mutation score, we need to have more non equivalent mutants to be detected and killed. In order to achieve that, we need to create more test cases based on the following conditions. First a test must reach the mutated statement. Otherwise if a mutated statement is not even reached, it can have no influence on the output, therefore that mutant can never be detected and killed. This condition is easy to reach if we have a good line coverage rate of our tests. Second, test input data should infect the program state by causing different program states for the mutant and the original program. This means we can try to create test cases based on the different kinds of mutants. For example, if we have a mutant which changes the condition within a if statement from a equality condition check to always false, then we must have a test case to make the condition of that if statement becomes true, and the execution code within that if statement must have some influences on output, such that that mutants can be detected. Finally, The incorrect program state must propagate to the program's output and be checked by the test. This is to say, our test cases must be able to catch and detect the incorrect program state caused by mutants. Otherwise, if a mutant changes the program state but test cases don’t check for that state, that mutant still can not be detected.
 
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
+Mutation testing can facilitate the design or the evaluation of the quality of a test
+suite. Compared to simple coverage metrics such as line coverage which only
+guarantees the execution of the code segment (reachability), mutation coverage
+actually adds a stressor that challenges a test suite (i.e. a bug) and ensures a statement
+is reached and checks the state of the execution. It creates unit copies of the SUT with
+a single change which is called a mutation, and then the test suite is run against the
+new code to assess if the bug injection is captured by the test suite.
 
+| **Advantages**                                                                                   | **Disadvantages**                                                                                     |
+|--------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
+| **Automated with Frameworks**: Can be automated using tools like PIT, streamlining the process. | **Computationally Intensive**: Generates many mutants, requiring careful selection of operators to manage the load. |
+| **Systematic Approach**: Provides a structured method to evaluate test suites.                  | **Equivalent Mutants**: These skew the mutation score and require time-consuming manual identification. |
+| **Tangible Goal**: Offers a clear metric (mutation score) to guide testing efforts.             | **Time-Consuming and Costly**: Generating and testing mutants is slow and often requires automation tools. |
+| **Improves Test Suite Quality**: Forces robust test case creation, enhancing fault detection.   | **Not Suitable for Black Box Testing**: Requires source code changes, making it incompatible with black box testing. |
+| **Increases Reliability**: Ensures bugs altering program behavior are caught, improving quality. | **Complex Analysis**: Analyzing surviving mutants and designing new tests can be complex and time-intensive. |
 # Explain your SELENUIM test case design process
 
 ## a. Identify Functionalities
