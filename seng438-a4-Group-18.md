@@ -31,25 +31,29 @@ In part 2, we are going to perform GUI testing with Sport chek’s web page. The
 
 # Report all the statistics and the mutation score for each test class
 ## (1) Range Class
-![](media/1.png)
-Figure 1- Range Pit Test Coverage Report for old test suite
-![](media/4.png)
-Figure 2- Range Pit Mutations for old test suite
+![Caption 1](media/1.png)  
+Figure 1 - Range PIT Test Coverage Report for old test suite  
 
-![](media/2.png)
-Figure 3- Range Pit Test Coverage Report for new test suite
-![](media/5.png)
-Figure 4- Range Pit Mutations for new test suite
+![Caption 2](media/4.png)  
+Figure 2 - Range PIT Mutations for old test suite  
 
-![](media/3.png)
-Figure 5- DataUtilities Pit Test Coverage Report for old test suite
-![](media/6.png)
-Figure 6- DataUtilities Pit Mutations for old test suite
+![Caption 3](media/2.png)  
+Figure 3 - Range PIT Test Coverage Report for new test suite  
 
-![](media/7.png)
-Figure 7- DataUtilities Pit Test Coverage Report for new test suite
-![](media/8.png)
-Figure 8- DataUtilities Pit Mutations for new test suite
+![Caption 4](media/5.png)  
+Figure 4 - Range PIT Mutations for new test suite  
+
+![Caption 5](media/3.png)  
+Figure 5 - DataUtilities PIT Test Coverage Report for old test suite  
+
+![Caption 6](media/6.png)  
+Figure 6 - DataUtilities PIT Mutations for old test suite  
+
+![Caption 7](media/7.png)  
+Figure 7 - DataUtilities PIT Test Coverage Report for new test suite  
+
+![Caption 8](media/8.png)  
+Figure 8 - DataUtilities PIT Mutations for new test suite    
 
 
 
