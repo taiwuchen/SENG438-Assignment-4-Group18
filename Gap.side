@@ -485,13 +485,6 @@
         ["xpath=//form/div/div/div", "xpath:position"]
       ],
       "value": ""
-    }, {
-      "id": "e8013418-6450-4cc6-9638-ff46b1a708fd",
-      "comment": "",
-      "command": "close",
-      "target": "",
-      "targets": [],
-      "value": ""
     }]
   }, {
     "id": "8aa44175-d141-4aa8-b7c7-4ea2f4b31e53",
@@ -645,13 +638,6 @@
         ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
       ],
       "value": ""
-    }, {
-      "id": "6c3d1105-f66b-4bbb-8b54-6aa5e4e84835",
-      "comment": "",
-      "command": "close",
-      "target": "",
-      "targets": [],
-      "value": ""
     }]
   }, {
     "id": "88d10bb8-5c97-4f05-a61d-488231b7e0ed",
@@ -756,13 +742,6 @@
         ["xpath=//div[@id='MyAccountContainer']/button/div", "xpath:idRelative"],
         ["xpath=//button/div", "xpath:position"]
       ],
-      "value": ""
-    }, {
-      "id": "dfd10b01-8ccb-444a-b2b8-07b87713753a",
-      "comment": "",
-      "command": "close",
-      "target": "",
-      "targets": [],
       "value": ""
     }]
   }, {
@@ -958,13 +937,6 @@
         ["xpath=//h1[contains(.,'Search results for: \"jeans\"')]", "xpath:innerText"]
       ],
       "value": ""
-    }, {
-      "id": "c5855c83-7486-4e18-8705-a3a22f3e0949",
-      "comment": "",
-      "command": "close",
-      "target": "",
-      "targets": [],
-      "value": ""
     }]
   }, {
     "id": "c8e021a2-92fd-45a7-8661-6d6fa07fe81a",
@@ -1106,13 +1078,6 @@
         ["xpath=//div[@id='search']/div/div/div/div/div[2]/div/p", "xpath:idRelative"],
         ["xpath=//p", "xpath:position"]
       ],
-      "value": ""
-    }, {
-      "id": "4a04cd14-e57a-47f0-8616-22553a3d1a7c",
-      "comment": "",
-      "command": "close",
-      "target": "",
-      "targets": [],
       "value": ""
     }]
   }, {
@@ -1483,13 +1448,6 @@
         ["xpath=//a[contains(.,'Jersey Crewneck T-Shirt')]", "xpath:innerText"]
       ],
       "value": ""
-    }, {
-      "id": "277a3c55-0f7e-4f8b-95fd-41b2bfdb215b",
-      "comment": "",
-      "command": "close",
-      "target": "",
-      "targets": [],
-      "value": ""
     }]
   }, {
     "id": "30d9fdaa-c6b2-4dd0-942c-39b4a294a0fc",
@@ -1587,13 +1545,6 @@
         ["xpath=//div[@id='empty-bag']/div", "xpath:idRelative"],
         ["xpath=//div[2]/main/div/div/div", "xpath:position"]
       ],
-      "value": ""
-    }, {
-      "id": "ca5b7433-7b84-4261-86e0-afa622359953",
-      "comment": "",
-      "command": "close",
-      "target": "",
-      "targets": [],
       "value": ""
     }]
   }],
