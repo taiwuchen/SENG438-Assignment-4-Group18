@@ -27,7 +27,7 @@ In part 2, we are going to perform GUI testing with Sport chek’s web page. The
 | 7. Incremented double field lower   | 123      | Incremented `this.lower` in `return this.upper - this.lower`   | Yes         | Killed by `testGetLengthNegativePositive`.                     |
 | 8. Decremented double field upper   | 132      | Decremented `this.upper` in `return this.lower / 2.0 + this.upper / 2.0`   | Yes         | Killed by `centralValueShouldBeNegative`.                                |
 | 9. Incremented double field upper   | 132      | Incremented `this.upper` in `return this.lower / 2.0 + this.upper / 2.0`   | Yes         | Killed by `centralValueShouldBeZero`.                                |
-| 10. Removed conditional           | 144      | Replaced `value >= this.lower && value <= this.upper` with `false`      | yes          |  Killed by `rangeDoesntContainAboveUpperBound`.                |
+| 10. Removed conditional           | 144      | Replaced `value >= this.lower && value <= this.upper` with `false`      | Yes          |  Killed by `rangeDoesntContainAboveUpperBound`.                |
 
 # Report all the statistics and the mutation score for each test class
 ## (1) Range Class
