@@ -18,7 +18,7 @@ In part 2, we are going to perform GUI testing with Sport chek’s web page. The
 # Analysis of 10 Mutants of the Range class 
 | **Mutant**                          | **Line** | **Description**                              | **Killed?** | **Reason**                                                                 |
 |-------------------------------------|----------|----------------------------------------------|-------------|---------------------------------------------------------------------------|
-| 1. Removed conditional              | 161       | Replaced `b1 >= b0` with `true`             | No          | No test for `b0 < this.upper && b1 >= b0` case in `intersects()`.                            |
+| 1. Removed conditional              | 161       | Replaced `b0 < this.upper && b1 >= b0` with `true`             | No          | No test for `b0 > this.upper OR b1 < b0` case in `intersects()`.                            |
 | 2. Decremented double field lower   | 132       | Decremented `this.lower` in `this.lower / 2.0 + this.upper / 2.0`               | No          | No test where decrementing `lower` changes the condition outcome.            |
 | 3. Decremented double field upper   | 132       | Decremented `this.upper` in `this.lower / 2.0 + this.upper / 2.0`               | No          | No test where incrementing `this.upper` changes the condition outcome.            |
 | 4. Less or equal to | 158       | Replaced `b1 > this.lower` with `b1 <= this.lower`          | No          | No test for `b1 < this.lower` case in `intersects()`.                            |
