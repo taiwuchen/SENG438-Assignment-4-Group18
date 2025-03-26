@@ -18,16 +18,16 @@ In part 2, we are going to perform GUI testing with Sport chek’s web page. The
 # Analysis of 10 Mutants of the Range class 
 | **Mutant**                          | **Line** | **Description**                              | **Killed?** | **Reason**                                                                 |
 |-------------------------------------|----------|----------------------------------------------|-------------|---------------------------------------------------------------------------|
-| 1. Removed conditional              | 90       | Replaced `b0 <= b1` with `false`             | No          | No test for `b0 > b1` case in `intersects()`.                            |
-| 2. Decremented double local var 1   | 90       | Decremented `b0` in `b0 <= b1`               | No          | No test where decrementing `b0` changes the condition outcome.            |
-| 3. Incremented double local var 1   | 90       | Incremented `b0` in `b0 <= b1`               | No          | No test where incrementing `b0` changes the condition outcome.            |
-| 4. Less or equal to greater or equal| 90       | Replaced `b0 <= b1` with `b0 >= b1`          | No          | No test for `b0 > b1` case in `intersects()`.                            |
-| 5. Decremented double field lower   | 105      | Decremented `this.lower` in `value < lower`  | Yes         | Killed by `testConstrain_BelowLowerBound_AcceptsBug`.                     |
-| 6. Decremented double field lower   | 123      | Decremented `this.lower` in `return lower`   | Yes         | Killed by `testConstrain_BelowLowerBound_AcceptsBug`.                     |
-| 7. Incremented double field lower   | 123      | Incremented `this.lower` in `return lower`   | Yes         | Killed by `testConstrain_BelowLowerBound_AcceptsBug`.                     |
-| 8. Decremented double field upper   | 132      | Decremented `this.upper` in `return upper`   | Yes         | Killed by `testConstrain_AboveUpperBound`.                                |
-| 9. Incremented double field upper   | 132      | Incremented `this.upper` in `return upper`   | Yes         | Killed by `testConstrain_AboveUpperBound`.                                |
-| 10. Substituted 1 with -1           | 144      | Substituted `1` with `-1` in some method     | No          | Likely in an untested method like `scale()` or `expand()`.                |
+| 1. Removed conditional              | 161       | Replaced `b1 >= b0` with `true`             | No          | No test for `b0 < this.upper && b1 >= b0` case in `intersects()`.                            |
+| 2. Decremented double field lower   | 132       | Decremented `this.lower` in `this.lower / 2.0 + this.upper / 2.0`               | No          | No test where decrementing `lower` changes the condition outcome.            |
+| 3. Decremented double field upper   | 132       | Decremented `this.upper` in `this.lower / 2.0 + this.upper / 2.0`               | No          | No test where incrementing `this.upper` changes the condition outcome.            |
+| 4. Less or equal to | 158       | Replaced `b1 > this.lower` with `b1 <= this.lower`          | No          | No test for `b1 < this.lower` case in `intersects()`.                            |
+| 5. Decremented double field lower   | 105      | Decremented `this.lower` in `return this.lower`  | Yes         | Killed by `testNegativeRangeGetLower`.                     |
+| 6. Decremented double field lower   | 123      | Decremented `this.lower` in `return this.upper - this.lower`   | Yes         | Killed by `testGetLengthPositivePositive`.                     |
+| 7. Incremented double field lower   | 123      | Incremented `this.lower` in `return this.upper - this.lower`   | Yes         | Killed by `testGetLengthNegativePositive`.                     |
+| 8. Decremented double field upper   | 132      | Decremented `this.upper` in `return this.lower / 2.0 + this.upper / 2.0`   | Yes         | Killed by `centralValueShouldBeNegative`.                                |
+| 9. Incremented double field upper   | 132      | Incremented `this.upper` in `return this.lower / 2.0 + this.upper / 2.0`   | Yes         | Killed by `centralValueShouldBeZero`.                                |
+| 10. Removed conditional           | 144      | Replaced `value >= this.lower && value <= this.upper` with `false`      | yes          |  Killed by `rangeDoesntContainAboveUpperBound`.                |
 
 # Report all the statistics and the mutation score for each test class
 ## (1) Range Class
@@ -44,10 +44,10 @@ Figure 3 - Range PIT Test Coverage Report for new test suite
 Figure 4 - Range PIT Mutations for new test suite  
 
 ## (2) DataUtilities Class
-![Caption 5](media/5.png)  
+![Caption 5](media/6.png)  
 Figure 5 - DataUtilities PIT Test Coverage Report for old test suite  
 
-![Caption 6](media/6.png)  
+![Caption 6](media/5.png)  
 Figure 6 - DataUtilities PIT Mutations for old test suite  
 
 ![Caption 7](media/7.png)  
