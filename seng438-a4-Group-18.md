@@ -44,10 +44,10 @@ Figure 3 - Range PIT Test Coverage Report for new test suite
 Figure 4 - Range PIT Mutations for new test suite  
 
 ## (2) DataUtilities Class
-![Caption 5](media/6.png)  
+![Caption 5](media/5.png)  
 Figure 5 - DataUtilities PIT Test Coverage Report for old test suite  
 
-![Caption 6](media/5.png)  
+![Caption 6](media/6.png)  
 Figure 6 - DataUtilities PIT Mutations for old test suite  
 
 ![Caption 7](media/7.png)  
